@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "42f1cf02-731f-455c-a1b1-bdea8c1881f7",
+		"name": "Movie-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22372448"
+	},
+	"item": [
+		{
+			"name": "user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sudeep123456@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sudeep123456@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "jwt_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OSwiZW1haWwiOiJzdWRlZXAxMjM0NTZAZ21haWwuY29tIn0sImlhdCI6MTY5OTk0MjYyOSwiZXhwIjoxNzAwMDI5MDI5fQ.ChukBwt3WHW_qZHqbZnfNxj2n37rlbaeKMqDamoERaI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"Interstellar\",\r\n    \"rating\": 8.7,\r\n    \"castList\": [\r\n        \"Matthew McConaughey\",\r\n        \"Jessica Chastain\",\r\n        \"Anne Hathaway\",\r\n        \"Mackenzie Foy\",\r\n        \"Timothée Chalamet\",\r\n        \"Matt Damon\"\r\n    ],\r\n    \"genre\": \"Science Fiction\",\r\n    \"releaseDate\": \"2014-11-05\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/9/movie",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"9",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie/list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OSwiZW1haWwiOiJzdWRlZXAxMjM0NTZAZ21haWwuY29tIn0sImlhdCI6MTY5OTk0MjYyOSwiZXhwIjoxNzAwMDI5MDI5fQ.ChukBwt3WHW_qZHqbZnfNxj2n37rlbaeKMqDamoERaI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/user/9/movie",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"9",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie/view",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OSwiZW1haWwiOiJzdWRlZXAxMjM0NTZAZ21haWwuY29tIn0sImlhdCI6MTY5OTk0MjYyOSwiZXhwIjoxNzAwMDI5MDI5fQ.ChukBwt3WHW_qZHqbZnfNxj2n37rlbaeKMqDamoERaI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/user/9/movie/Interstellar",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"9",
+						"movie",
+						"Interstellar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie/update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "jwt_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OSwiZW1haWwiOiJzdWRlZXAxMjM0NTZAZ21haWwuY29tIn0sImlhdCI6MTY5OTk0MjYyOSwiZXhwIjoxNzAwMDI5MDI5fQ.ChukBwt3WHW_qZHqbZnfNxj2n37rlbaeKMqDamoERaI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\":\"Interstellar\",\r\n    \"rating\": 8.7,\r\n    \"castList\": [\r\n        \"Matthew McConaughey\",\r\n        \"Jessica Chastain\",\r\n        \"Anne Hathaway\",\r\n        \"Mackenzie Foy\",\r\n        \"Matt Damon\"\r\n    ],\r\n    \"releaseDate\": \"2014-11-06\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/9/movie/Interstellar",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"9",
+						"movie",
+						"Interstellar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "jwt_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OSwiZW1haWwiOiJzdWRlZXAxMjM0NTZAZ21haWwuY29tIn0sImlhdCI6MTY5OTk0MjYyOSwiZXhwIjoxNzAwMDI5MDI5fQ.ChukBwt3WHW_qZHqbZnfNxj2n37rlbaeKMqDamoERaI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/user/9/movie/Interstellar",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"9",
+						"movie",
+						"Interstellar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
