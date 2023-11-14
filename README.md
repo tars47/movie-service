@@ -6,7 +6,7 @@ This Project provides users to register, login and add/update/delete/view their 
 
 ## Requirements
 
-For development, you will only need Node.js, npm, and postgres installed in your environement.
+For development, you will need Node.js, npm, and postgres installed in your environment.
 
     $ node --version
     v16.16.0.
@@ -21,7 +21,7 @@ For development, you will only need Node.js, npm, and postgres installed in your
 
 ## Install
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
+    $ git clone https://github.com/tars47/movie-service
     $ cd movie-service
     $ npm i
 
