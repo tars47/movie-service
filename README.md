@@ -23,7 +23,6 @@ For development, you will need Node.js, npm, and postgres installed in your envi
 
     $ git clone https://github.com/tars47/movie-service
     $ cd movie-service
-    $ npm i
 
 ## Configure app
 
@@ -37,4 +36,9 @@ Open `/.env` replace PGPASSWORD with you postgres user password
 
 ## Running the project
 
+    $ npm i
     $ npm run start
+
+## Video Recording
+
+https://www.loom.com/share/8eb62cd4da02427ba8cecdaa419912b5

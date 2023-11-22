@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"sudeep123456@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"raw": "{\r\n    \"email\": \"sudeep@taskphin.com\",\r\n    \"password\": \"12345\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,12 +36,25 @@
 		},
 		{
 			"name": "user/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.postmanBDD);\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.environment.set(\"jwt_token\", jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"sudeep123456@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"raw": "{\r\n    \"email\": \"sudeep@taskphin.com\",\r\n    \"password\": \"12345\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -69,7 +82,7 @@
 				"header": [
 					{
 						"key": "jwt_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OSwiZW1haWwiOiJzdWRlZXAxMjM0NTZAZ21haWwuY29tIn0sImlhdCI6MTY5OTk0MjYyOSwiZXhwIjoxNzAwMDI5MDI5fQ.ChukBwt3WHW_qZHqbZnfNxj2n37rlbaeKMqDamoERaI",
+						"value": "{{jwt_token}}",
 						"type": "text"
 					}
 				],
@@ -83,14 +96,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/user/9/movie",
+					"raw": "localhost:3000/user/1/movie",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"user",
-						"9",
+						"1",
 						"movie"
 					]
 				}
@@ -104,19 +117,19 @@
 				"header": [
 					{
 						"key": "jwt_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OSwiZW1haWwiOiJzdWRlZXAxMjM0NTZAZ21haWwuY29tIn0sImlhdCI6MTY5OTk0MjYyOSwiZXhwIjoxNzAwMDI5MDI5fQ.ChukBwt3WHW_qZHqbZnfNxj2n37rlbaeKMqDamoERaI",
+						"value": "{{jwt_token}}",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "localhost:3000/user/9/movie",
+					"raw": "localhost:3000/user/1/movie",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"user",
-						"9",
+						"1",
 						"movie"
 					]
 				}
@@ -130,19 +143,19 @@
 				"header": [
 					{
 						"key": "jwt_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OSwiZW1haWwiOiJzdWRlZXAxMjM0NTZAZ21haWwuY29tIn0sImlhdCI6MTY5OTk0MjYyOSwiZXhwIjoxNzAwMDI5MDI5fQ.ChukBwt3WHW_qZHqbZnfNxj2n37rlbaeKMqDamoERaI",
+						"value": "{{jwt_token}}",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "localhost:3000/user/9/movie/Interstellar",
+					"raw": "localhost:3000/user/1/movie/Interstellar",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"user",
-						"9",
+						"1",
 						"movie",
 						"Interstellar"
 					]
@@ -157,7 +170,7 @@
 				"header": [
 					{
 						"key": "jwt_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OSwiZW1haWwiOiJzdWRlZXAxMjM0NTZAZ21haWwuY29tIn0sImlhdCI6MTY5OTk0MjYyOSwiZXhwIjoxNzAwMDI5MDI5fQ.ChukBwt3WHW_qZHqbZnfNxj2n37rlbaeKMqDamoERaI",
+						"value": "{{jwt_token}}",
 						"type": "text"
 					}
 				],
@@ -171,14 +184,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/user/9/movie/Interstellar",
+					"raw": "localhost:3000/user/1/movie/Interstellar",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"user",
-						"9",
+						"1",
 						"movie",
 						"Interstellar"
 					]
@@ -193,19 +206,19 @@
 				"header": [
 					{
 						"key": "jwt_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OSwiZW1haWwiOiJzdWRlZXAxMjM0NTZAZ21haWwuY29tIn0sImlhdCI6MTY5OTk0MjYyOSwiZXhwIjoxNzAwMDI5MDI5fQ.ChukBwt3WHW_qZHqbZnfNxj2n37rlbaeKMqDamoERaI",
+						"value": "{{jwt_token}}",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "localhost:3000/user/9/movie/Interstellar",
+					"raw": "localhost:3000/user/1/movie/Interstellar",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"user",
-						"9",
+						"1",
 						"movie",
 						"Interstellar"
 					]
